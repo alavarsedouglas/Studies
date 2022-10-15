@@ -1,0 +1,66 @@
+@font-face {
+    font-family: Open_Sans;
+    src: url(fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf);
+}
+
+* {
+    font-family: Open_Sans, Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #555;
+}
+
+h1,
+h2 {
+    color: #111;
+}
+
+.top_bar {
+    background-color: #333;
+    color: aliceblue;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 8px;
+    border-bottom: 5px solid orange;
+}
+
+.container {
+    max-width: 888px;
+    margin: auto;
+    padding: 30px;
+}
+
+
+.headline {
+    font-size: 56px;
+    line-height: 64px;
+}
+
+.subtitle {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.author {
+    font-weight: bold;
+    font-size: 0.8em;
+
+}
+
+.social_icons {
+    margin-top: 10px;
+}
+
+.social_icon {
+    width: 20px;
+    padding: 10px 10px 10px 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
