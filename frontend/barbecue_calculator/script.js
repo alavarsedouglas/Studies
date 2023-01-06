@@ -9,10 +9,6 @@ let kids = document.getElementById("kids")
 let duration = document.getElementById("duration")
 let results = document.getElementById("results")
 
-// function clear() {
-// #
-// }
-
 function submit() {
     let meats = ((adults.value * meatPP(duration)) + (kids.value * meatPP(duration)/2 )).toFixed(2)
     let beer = Math.ceil(adults.value * beerPP(duration))
