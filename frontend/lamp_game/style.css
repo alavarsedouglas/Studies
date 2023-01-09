@@ -1,0 +1,17 @@
+body {
+  text-align: center;
+  font-size: 20pt;
+}
+
+div#dica {
+  background: rgb(52, 151, 52);
+  color: white;
+  font: lighter 20pt;
+  width: 300px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  margin: auto;
+  border-radius: 5%;  
+  text-shadow: 5px 5px 5px black;
+}
