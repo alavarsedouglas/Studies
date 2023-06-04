@@ -39,17 +39,23 @@ MESSAGE="
     -s - Sort Output
 "
 
-VERSION="v1.2"
+VERSION="v1.3"
 CHAVE_ORDENA=0
 CHAVE_MAIUSCULO=0
 
-case "$1" in
-    -h) echo "$MESSAGE" && exit 0      ;;
-    -v) echo "$VERSION" && exit 0      ;;
-    -s) CHAVE_ORDENA=1                 ;;
-    -m) CHAVE_MAIUSCULO=1              ;;
-     *) echo "$USERS"                  ;;
-esac 
+while test -n "$1"
+do
+    case "$1" in
+        -h) echo "$MESSAGE" && exit 0                                                 ;;
+        -v) echo "$VERSION" && exit 0                                                 ;;
+        -s) CHAVE_ORDENA=1                                                            ;;
+        -m) CHAVE_MAIUSCULO=1                                                         ;;
+        *) echo "Opção inválida, encontre as possibilidades utilizando -h." && exit 1 ;;
+    esac 
+    shift 
+done
 
-[ $CHAVE_ORDENA -eq 1 ] && echo "$USERS" | sort
-[ $CHAVE_MAIUSCULO -eq 1 ] && echo "$USERS" | tr [a-z] [A-Z]
+[ $CHAVE_ORDENA -eq 1 ]    && USERS=$(echo "$USERS" | sort)
+[ $CHAVE_MAIUSCULO -eq 1 ] && USERS=$(echo "$USERS" | tr a-z A-Z)
+
+echo "$USERS"
